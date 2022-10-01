@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "==1.12.2"
+yfinance = "==0.1.74"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
