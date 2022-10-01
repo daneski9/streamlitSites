@@ -5,13 +5,13 @@ import mysql.connector
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
 st.write("hello!")
-
+mydb = mysql.connector.connect(host="ecs-pd-proj-db.ecs.csus.edu", user="CSC174014", password="Csc134_473043643" )
 @st.experimental_singleton
 def init_connection():
     return mysql.connector.connect(**st.secrets["mysql"])
 
-conn = init_connection()
-
+#conn = init_connection()
+conn = mysql.connector.connect(host="ecs-pd-proj-db.ecs.csus.edu", user="CSC174014", password="Csc134_473043643" )
 # Perform query.
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
