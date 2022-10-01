@@ -1,5 +1,6 @@
+from asyncore import write
+from textwrap import wrap
 import streamlit as st
-
 import mysql.connector
 
 # Initialize connection.
